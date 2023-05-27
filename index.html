@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web piano</title>
+    <link rel="stylesheet" href="style.css">
+    <!--<script src="scripts/main.js"></script>-->
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="header-inside">Virtual Piano</h1>
+            <hr>
+        </div>
+    </div>
+    <div class="main">
+        <div class="container-btn"> 
+            <button class="btn btn-notes btn-active">Notes</button>
+            <button class="btn btn-letters">Letters</button>
+        </div>
+        <div class="piano"> <!--атрибут "data-" является удобным способом хранения пользовательских данных и добавления дополнительной информации к элементам HTML-->
+            <div data-key="68" data-note="C" data-letter="D" class="key">
+                <kbd>D</kbd>
+            </div> <!--C-->
+            <div data-key="70" data-note="D" data-letter="F" class="key">
+                <kbd>F</kbd>
+            </div> <!--D-->
+            <div data-key="71" data-note="E" data-letter="G" class="key">
+                <kbd>G</kbd>
+            </div> <!--E-->
+            <div data-key="72" data-note="F" data-letter="H" class="key">
+                <kbd>H</kbd>
+            </div> <!--F-->
+            <div data-key="74" data-note="G" data-letter="J" class="key">
+                <kbd>J</kbd>
+            </div> <!--G-->
+            <div data-key="75" data-note="A" data-letter="K" class="key">
+                <kbd>K</kbd>
+            </div> <!--A-->
+            <div data-key="76" data-note="B" data-letter="L" class="key">
+                <kbd>L</kbd>
+            </div> <!--B-->
+            <div class="blacks">
+                <div data-key="82"data-note="C#" data-letter="R" class="key black">
+                    <kbd>R</kbd>
+                </div> <!--C#-->
+                <div data-key="84" data-note="D#" data-letter="T" class="key black">
+                    <kbd>T</kbd>
+                </div> <!--D#-->
+                <div data-key="85" data-note="F#" data-letter="U" class="key black">
+                    <kbd>U</kbd>
+                </div> <!--F#-->
+                <div data-key="73" data-note="G#" data-letter="I" class="key black">
+                    <kbd>I</kbd>
+                </div> <!--G#-->
+                <div data-key="79" data-note="A#" data-letter="O" class="key black">
+                    <kbd>O</kbd>
+                </div> <!--A#-->
+            </div>
+        </div>
+    </div>
+    <audio data-key="68"  data-note="C" src="sounds/C4.mp3"></audio> <!--C-->
+    <audio data-key="82" data-note="C#" src="sounds/Db4.mp3"></audio> <!--C#-->
+    <audio data-key="70" data-note="D" src="sounds/D4.mp3"></audio> <!--D-->
+    <audio data-key="84" data-note="D#" src="sounds/Eb4.mp3"></audio> <!--D#-->
+    <audio data-key="70" data-note="E" src="sounds/E4.mp3"></audio> <!--E-->
+    <audio data-key="72" data-note="F" src="sounds/F4.mp3"></audio> <!--F-->
+    <audio data-key="85" data-note="F#" src="sounds/Gb4.mp3"></audio> <!--F#-->
+    <audio data-key="74" data-note="G" src="sounds/G4.mp3"></audio> <!--G-->
+    <audio data-key="73" data-note="G#" src="sounds/Ab4.mp3"></audio> <!--G#-->
+    <audio data-key="75" data-note="A" src="sounds/A4.mp3"></audio> <!--A-->
+    <audio data-key="79" data-note="A#" src="sounds/Bb4.mp3"></audio> <!--A#-->
+    <audio data-key="76" data-note="B" src="sounds/B4.mp3"></audio> <!--B-->
+    <script>
+        window.addEventListener('keydown', function(e) {
+            const audio = document.querySelector('audio[data-key="${e.keyCode}"]');
+            console.log(audio);
+        });
+    </script>
+</body>
+</html>
