@@ -30,6 +30,7 @@ body {
     margin: 0 auto;
     margin-bottom: 80px;
     padding-top: 100px;
+    padding-bottom: 40px;
 }
 .btn {
     font-style: bold;
@@ -58,6 +59,7 @@ body {
 .btn-active:hover {
     background-color:rgb(7, 216, 199)
 }
+
 .container-main {
     min-height: calc(100vh - 110px);
     padding: 60px 10px 0;
@@ -88,11 +90,7 @@ body {
     transition: 0.3s;
     cursor: pointer;
 }
-.key:hover {
-    background-color: white;
-    color: rgb(7, 216, 199);
-    box-shadow: -5px -5px 20px, 5px 5px 20px;
-    }
+
 .blacks {
     position: absolute;
     top: 0;
@@ -115,77 +113,9 @@ body {
     transform-origin: center top;
     margin: 0px;
     }
-.key.black:hover {
-    background-color: rgb(22, 22, 22);
+
+.key-active {
     color: rgb(7, 216, 199);
     box-shadow: -5px -5px 20px, 5px 5px 20px;
-    }
-.key.key-active,
-.key.black.key-active {
-    transform: scale(0.95);
+    transition: 0s;
 }
-.key.none {
-    background-color: transparent;
-    border: 0;
-    border-radius: 0;
-    pointer-events: none;
-    }
-.key::before,
-.key::after {
-    content: attr(data-note);
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    font-size: 26px;
-    line-height: 40px;
-    text-align: center;
-    color: #a2abb3;
-    bottom: -45px;
-    left: 20px;
-    transition: 0.3s;
-    pointer-events: none;
-    }
-.key::after {
-    display: none;
-    content: attr(data-letter);
-}
-.key:hover::before,
-.key:hover::after {
-color: #d7dfe6;
-}
-
-.key-active:hover::before,
-.key-active:hover::after {
-color: #00b4a4;
-}
-
-.black:active {
-border-top: 0;
-}
-
-.key.black::before,
-.key.black::after {
-bottom: 175px;
-left: 7px;
-}
-.key.letter::before {
-display: none;
-}
-.key.letter::after {
-display: block;
-}
-.key-letter::before {
-content: attr(data-letter);
-}
-
-.key-remove-mouse:active::before {
-color: #a2abb3;
-}
-
-.key-active-pseudo:hover::after,
-.key-active-pseudo:hover::before,
-.key-active::after,
-.key-active::before {
-color: #00b4a4;
-}
-
