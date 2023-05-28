@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>web piano</title>
     <link rel="stylesheet" href="style.css">
-    <!--<script src="scripts/main.js"></script>-->
+    <script src="scripts/main.js"></script>
 </head>
 <body>
     <div class="container">
@@ -65,7 +65,7 @@
     <audio data-key="82" data-note="C#" src="sounds/Db4.mp3"></audio> <!--C#-->
     <audio data-key="70" data-note="D" src="sounds/D4.mp3"></audio> <!--D-->
     <audio data-key="84" data-note="D#" src="sounds/Eb4.mp3"></audio> <!--D#-->
-    <audio data-key="70" data-note="E" src="sounds/E4.mp3"></audio> <!--E-->
+    <audio data-key="71" data-note="E" src="sounds/E4.mp3"></audio> <!--E-->
     <audio data-key="72" data-note="F" src="sounds/F4.mp3"></audio> <!--F-->
     <audio data-key="85" data-note="F#" src="sounds/Gb4.mp3"></audio> <!--F#-->
     <audio data-key="74" data-note="G" src="sounds/G4.mp3"></audio> <!--G-->
@@ -73,11 +73,7 @@
     <audio data-key="75" data-note="A" src="sounds/A4.mp3"></audio> <!--A-->
     <audio data-key="79" data-note="A#" src="sounds/Bb4.mp3"></audio> <!--A#-->
     <audio data-key="76" data-note="B" src="sounds/B4.mp3"></audio> <!--B-->
-    <script>
-        window.addEventListener('keydown', function(e) {
-            const audio = document.querySelector('audio[data-key="${e.keyCode}"]');
-            console.log(audio);
-        });
-    </script>
+  
+    
 </body>
 </html>
